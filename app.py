@@ -17,6 +17,7 @@ from wordcloud import WordCloud
 import nltk
 nltk.download('stopwords')
 import base64
+from PIL import Image
 
 # =====================
 # Load Model & Vectorizer
