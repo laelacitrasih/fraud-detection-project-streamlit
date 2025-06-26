@@ -19,10 +19,6 @@ env/
 .idea/
 *.swp
 
-# Data & model files
-data/*.csv
-models/*.pkl
-models/*.joblib
 
 # Streamlit
 .streamlit/
