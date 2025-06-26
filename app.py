@@ -198,10 +198,15 @@ elif menu == "Poster":
     st.markdown("Berikut adalah poster visualisasi proyek deteksi pesan penipuan:")
 
     poster_path = "assets/poster.png"
+
     if os.path.exists(poster_path):
-        st.image(poster_path, caption="Poster Proyek Deteksi Penipuan", use_container_width=True)
+        try:
+            st.image(poster_path, caption="Poster Proyek", use_container_width=True)
+        except Exception as e:
+            st.error(f"❌ Gagal menampilkan poster. Error: {e}")
     else:
         st.info("🖼️ Poster belum tersedia. Simpan sebagai `assets/poster.png` untuk ditampilkan di sini.")
+
 
 # =====================
 # TRAIN MODEL
