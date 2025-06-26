@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+*.pkl
+*.joblib
+*.h5
+
+# Virtual environment
+venv/
+env/
+
+# Jupyter Notebook runtime
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# VSCode & IDEs
+.vscode/
+.idea/
+*.swp
+
+# Data & model files
+data/*.csv
+models/*.pkl
+models/*.joblib
+
+# Streamlit
+.streamlit/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
