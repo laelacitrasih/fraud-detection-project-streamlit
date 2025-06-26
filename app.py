@@ -31,7 +31,11 @@ model, vectorizer = load_model()
 # =====================
 # Konfigurasi Halaman
 # =====================
-st.set_page_config(page_title="📱 Fraud Message Detection", layout="centered")
+st.set_page_config(
+    page_title="📱 Fraud Message Detection",
+    layout="centered",
+    initial_sidebar_state="expanded"
+)
 
 # =====================
 # Sidebar Menu
