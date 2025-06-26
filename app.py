@@ -201,7 +201,8 @@ elif menu == "Poster":
 
     if os.path.exists(poster_path):
         try:
-            st.image(poster_path, caption="Poster Proyek", use_container_width=True)
+            img = Image.open(poster_path)
+            st.image(img, caption="Poster Proyek Deteksi Penipuan", width=700)
         except Exception as e:
             st.error(f"❌ Gagal menampilkan poster. Error: {e}")
     else:
