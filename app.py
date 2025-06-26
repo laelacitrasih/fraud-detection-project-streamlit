@@ -45,7 +45,8 @@ menu = st.sidebar.radio("📂 Menu", [
     "Data Visualization",
     "Project Overview",
     "Paper",
-    "Poster"
+    "Poster",
+    "Train Model"
 ])
 
 # =====================
@@ -170,7 +171,7 @@ elif menu == "Project Overview":
 # PAPER
 # =====================
 
-elif menu == "📄 Paper":
+elif menu == "Paper":
     st.title("📄 Paper Ilmiah")
     paper_path = "assets/paper.pdf"
 
@@ -198,7 +199,7 @@ elif menu == "📄 Paper":
 # =====================
 # POSTER
 # =====================
-elif menu == "🖼️ Poster":
+elif menu == "Poster":
     st.title("🖼️ Poster Proyek")
     st.markdown("Berikut adalah poster visualisasi proyek deteksi pesan penipuan:")
 
@@ -208,3 +209,17 @@ elif menu == "🖼️ Poster":
 
     else:
         st.info("🖼️ Poster belum tersedia. Simpan sebagai `assets/poster.png` untuk ditampilkan di sini.")
+
+elif menu == "Train Model":
+    st.title("🧠 Train the Classification Model")
+
+    if st.button("🔁 Jalankan Training"):
+        with st.spinner("Sedang melatih model..."):
+            import subprocess
+            result = subprocess.run(["python", "train_model.py"], capture_output=True, text=True)
+            
+            st.success("✅ Model berhasil dilatih ulang.")
+            st.code(result.stdout)
+            if result.stderr:
+                st.error("❌ Error:")
+                st.code(result.stderr)
